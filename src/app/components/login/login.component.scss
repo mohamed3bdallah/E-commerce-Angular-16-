@@ -1,0 +1,59 @@
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+form{
+  width: 50%;
+  @media screen and (max-width: 768px){
+    width: 100% !important;
+    margin-top: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+  }
+}
+.bg-main{
+  background-color: #fdf9f3;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-family: var(--font-secondary);
+  // border: 1px solid var(--main-color);
+    border-radius: 0px 20px 20px 0px;
+  @media screen and (max-width: 768px){
+    border-radius: 20px;
+    padding: 20px 15px;
+
+  }
+}
+.form-group{
+  color: var(--main-color);
+  // margin-bottom: 10px;
+
+  label{
+    font-weight: 500 ;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  input{
+    margin-bottom: 10px;
+    border: 1px solid var(--main-color);
+    border-radius:  20px;
+    padding: 10px;
+  }
+
+}
+.log-img{
+  background-image: url('../../../assets/images/poster-2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+h2{
+  font-family: var(--font-secondary);
+  color: #fdf9f3;
+  font-size: 1.8rem;
+  font-weight: 500;
+
+}
+}

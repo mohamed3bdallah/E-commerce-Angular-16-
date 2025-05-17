@@ -1,0 +1,256 @@
+<app-nav-auth></app-nav-auth>
+<section class="landing-section h-auto">
+  <div class="container mx-auto">
+    <div
+      class="row d-flex justify-content-center align-items-center flex-column gap-3 gap-md-0 flex-md-row"
+    >
+      <div
+        class="col-12 col-md-6 px-3 px-md-0 d-flex justify-content-center align-items-center align-items-md-start gap-2 flex-column"
+      >
+        <h1 class="hero-content text-start mb-5">
+          Elevate Your Style with
+          <span class="underline text-nowrap pb-3">The Latest Trends.</span>
+        </h1>
+        <p class="hero-content-text lead mb-3">
+          Explore a curated of stylish, affordable fashion designed to elevate
+          your wardrobe. Discover the perfect blend of trend, comfort, and
+          individually for your look.
+        </p>
+        <button routerLink="/home" class="btn btn-main rounded-pill px-5 py-2">Shop Now</button>
+      </div>
+      <div class="col-12 col-md-6 px-3 px-md-0">
+        <div
+          class="poster-container d-flex justify-content-center align-items-center"
+        >
+          <img
+            class="image overflow-hidden"
+            src="../../../assets/images/image 2.png"
+            alt=""
+          />
+          <img
+            class="arow d-none d-lg-block"
+            src="../../../assets/images/arow.png"
+            alt=""
+          />
+          <img
+            class="arow2 d-none d-lg-block"
+            src="../../../assets/images/arow.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section">
+  <h2 class="text-center mb-2">Our Services</h2>
+  <p class="text-center mb-5">Benefits when using our services</p>
+  <div class="container mx-auto">
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col px-1">
+        <div
+          class="service-card d-flex justify-content-center align-items-start flex-column text-start py-5"
+        >
+          <div class="service-icon mb-2">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title mb-2">Inspiration</h3>
+            <p class="service-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col px-1">
+        <div
+          class="service-card d-flex justify-content-center align-items-start flex-column text-start py-5"
+        >
+          <div class="service-icon mb-1 mb-lg-2">
+            <i class="fa-solid fa-headphones"></i>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title mb-2">24/7 Customer Services</h3>
+            <p class="service-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing quos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col px-1">
+        <div
+          class="service-card d-flex justify-content-center align-items-start flex-column text-start py-5"
+        >
+          <div class="service-icon mb-2">
+            <i class="fa-solid fa-truck"></i>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title mb-2">Free Shipping</h3>
+            <p class="service-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products-section">
+  <h2 class="text-center mb-2">Our Products</h2>
+  <p class="text-center mb-5">Best Selling Product</p>
+  <div class="search-bar d-flex justify-content-center align-items-center mb-3">
+    <ul class="d-flex justify-content-center align-items-center">
+      <li [class]="active == '' ? 'active' : ''">
+        <a (click)="putName('')">All</a>
+      </li>
+      <li [class]="active == 'men' ? 'active' : ''">
+        <a (click)="putName('men')">Men</a>
+      </li>
+      <li [class]="active == 'woman' ? 'active' : ''">
+        <a (click)="putName('woman')">Women</a>
+      </li>
+      <li [class]="active == 'shoes' ? 'active' : ''">
+        <a (click)="putName('shoes')">Shoes</a>
+      </li>
+    </ul>
+  </div>
+  <div class="container mx-auto">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+      <div
+        *ngFor="let product of products | search : searchTerm | slice : 0 : 8"
+        class="col my-3 px-1"
+      >
+        <div class="card-container p-2">
+          <div routerLink="/details" class="card rounded-4 overflow-hidden">
+            <img
+              [src]="product.imageCover"
+              class="card-img-top w-100 h-auto"
+              alt="..."
+            />
+            <div
+              class="card-body p-2 d-flex justify-content-between align-items-end"
+            >
+              <div class="card-content p-2">
+                <h5 class="card-title">
+                  {{ product.title.split(" ", 2).join(" ") }}
+                </h5>
+                <p class="card-text">
+                  {{ product.price | currency : "GBP" }}
+                </p>
+                <p class="rating">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span class="rating-average">{{
+                    product.ratingsAverage
+                  }}</span>
+                  <span class="quantity text-muted mx-1"
+                    >({{ product.ratingsQuantity }})</span
+                  >
+                </p>
+              </div>
+
+              <div
+                routerLink="/cart"
+                class="d-flex justify-content-center align-items-center add-to-cart"
+              >
+                <i
+                  class="fa-solid fa-plus btn btn-main p-3 mb-2 rounded-circle"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="poster container rounded-4 overflow-hidden mx-auto">
+  <div
+    class="container mx-auto poster-container d-flex justify-content-center align-items-center h-100 w-100"
+  >
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12">
+        <div
+          class="poster-content d-flex flex-column justify-content-center align-items-center"
+        >
+          <h2 class=" text-white">
+            Discover Fashion That Speaks To You.
+          </h2>
+          <p class="w-75">
+            Explore a range of high-quality, affordable furniture designed to
+            transform any room. Discover the perfect blend of style, comfort,
+            and functionality for your space.
+          </p>
+          <button class="btn bg-transparent rounded-pill px-5 py-2">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carousel-section">
+  <h2 class="text-center mb-2">Our Reviews</h2>
+  <p class="text-center mb-5">What Our Customers Say</p>
+  <div class="container mx-auto">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template
+        carouselSlide
+        [id]="slide.id"
+        *ngFor="let slide of slidesReviews"
+      >
+        <div class="review rounded-4 overflow-hidden me-3 ">
+          <div class="quote-up  overflow-hidden mb-2">
+            <img
+              class="w-100"
+              src="../../../assets/images/quote-up.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="mb-2 d-flex justify-content-center align-items-start flex-column"
+          >
+            <p>{{ slide.review }}</p>
+          </div>
+          <div class="d-flex justify-content-start align-items-center gap-2 ">
+            <div class="image overflow-hidden shadow-lg ">
+              <img class="" [src]="slide.src" [alt]="slide.name" />
+            </div>
+            <h3 class="text-center text-nowrap">{{ slide.name }}</h3>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</section>
+<section class="contact-section">
+  <h2 class="text-center mb-2">Contact Us</h2>
+  <p class="text-center mb-5">We'd love to hear from you!</p>
+  <div class="container mx-auto">
+        <div class="contact-form w-100">
+          <form class=" d-flex justify-content-center align-items-center flex-column ">
+            <div class="form-group w-100">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name" />
+            </div>
+            <div class="form-group w-100">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email" />
+            </div>
+            <div class="form-group w-100">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-main rounded-pill px-5 py-2 mt-2">Submit</button>
+          </form>
+        </div>
+      </div>
+
+</section>
+<app-footer></app-footer>

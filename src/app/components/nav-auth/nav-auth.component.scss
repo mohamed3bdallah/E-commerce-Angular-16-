@@ -1,0 +1,21 @@
+.navbar{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#8B5E35;
+}
+.btn-main2{
+  border: 1px solid #8B5E35;
+    color:#8B5E35;
+    transition: all 0.4s ease;
+  }
+  .btn-main2:hover{
+    background-color: #090F41;
+    color: #fff;
+  }
+  .active{
+    background-color: #090F41;
+    color: #fff;
+  }

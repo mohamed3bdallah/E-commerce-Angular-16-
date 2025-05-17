@@ -1,0 +1,30 @@
+
+  <nav
+    class="navbar navbar-expand-lg bg-body-tertiary text-capitalize d-flex justify-content-between align-items-center fixed-top"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="#">elegance</a>
+
+      <div class="d-flex gap-2 justify-content-center align-items-center flex-column-reverse flex-md-row">
+        <button
+          routerLink="/login"
+          (click)="Activation(true)"
+          routerLinkActive="active"
+
+          class="btn btn-main2 rounded-pill px-4"
+        >
+          {{ isLoginActive ? "welcome back" : "login" }}
+        </button>
+        <button
+          routerLink="/register"
+          (click)="Activation(false)"
+          routerLinkActive="active"
+
+          class="btn btn-main rounded-pill px-4 "
+        >
+          {{ isRegisterActive ? "welcome to elegance" : "register" }}
+        </button>
+      </div>
+    </div>
+  </nav>
+

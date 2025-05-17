@@ -1,0 +1,84 @@
+<section
+  class="d-flex justify-content-center align-items-center px-5 w-100  mx-auto"
+>
+  <div
+    class="log-img w-50 h-100 rounded-start-4 d-none d-md-flex flex-column justify-content-end align-items-center"
+  >
+    <div class="p-4 text-white">
+      <h2>
+        Explore a range of high-quality, affordable furniture designed to
+        transform any room. Discover the perfect blend of style, comfort, and
+        functionality for your space.
+      </h2>
+    </div>
+  </div>
+
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="formSubmit()"
+    class="d-flex justify-content-center align-items-center flex-column mx-auto bg-main h-100"
+  >
+    <div class="form-group w-100">
+      <label for="email">Email :</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Your Email"
+        formControlName="email"
+      />
+      <div
+        class="alert alert-danger rounded-4"
+        *ngIf="
+          loginForm.get('email')?.errors && loginForm.get('email')?.touched
+        "
+      >
+        <p *ngIf="loginForm.get('email')?.getError('required')">
+          Email is required
+        </p>
+        <p *ngIf="loginForm.get('email')?.getError('email')">
+          Email is not valid
+        </p>
+      </div>
+    </div>
+    <div class="form-group w-100">
+      <label for="password">Password :</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Your password"
+        formControlName="password"
+      />
+      <div
+        class="alert alert-danger rounded-4"
+        *ngIf="
+          loginForm.get('password')?.errors &&
+          loginForm.get('password')?.touched
+        "
+      >
+        <p *ngIf="loginForm.get('password')?.getError('required')">
+          Password is required
+        </p>
+        <p *ngIf="loginForm.get('password')?.getError('pattern')">
+          Password must start with Uppercase and contains 6 to 20
+        </p>
+      </div>
+    </div>
+
+    <button
+      [disabled]="loginForm.invalid"
+      class="btn btn-main rounded-pill px-5 py-2 mt-2"
+    >
+      Login
+    </button>
+    <div>
+      <p *ngIf="masErr" class="alert alert-danger rounded-4 mt-3">
+        {{ masErr }}
+      </p>
+      <p *ngIf="masSuc" class="alert alert-success rounded-4 mt-3">
+        {{ masSuc }}
+      </p>
+    </div>
+  </form>
+</section>

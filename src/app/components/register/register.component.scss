@@ -1,0 +1,25 @@
+.bg-main{
+  background-color: #fdf9f3;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-family: var(--font-secondary);
+  border: 1px solid var(--main-color);
+    border-radius: 20px;
+}
+.form-group{
+  color: var(--main-color);
+  margin-bottom: 10px;
+
+  label{
+    font-weight: 500 ;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  input{
+    margin-bottom: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+}

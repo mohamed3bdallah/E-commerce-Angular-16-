@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+/* Font Variables */
+:root {
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Poppins", sans-serif;
+  --main-color: #8b5e35;
+  --second-color: #9b7e5c;
+  --text-color: #090f41;
+  --second-text: #9d9daa;
+  --review-color: #ffc000;
+  --Error-color: #d00439;
+  --bg-footer: #2e2e2e;
+}
+
+/* Global Typography */
+body {
+  font-family: var(--font-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.btn-main {
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: var(--text-color);
+    color: white;
+  }
+}
+.nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--main-color) !important;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--text-color) !important;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
