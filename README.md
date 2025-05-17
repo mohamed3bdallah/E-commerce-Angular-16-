@@ -1,4 +1,4 @@
-<h1>Hi! , iam still working on this project it will be ready soon</h1>
+<h1>Hi! I am still working on this project, it will be ready soon</h1>
 
 
 # ECommerce
