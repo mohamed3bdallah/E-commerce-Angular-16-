@@ -16,7 +16,9 @@
           your wardrobe. Discover the perfect blend of trend, comfort, and
           individually for your look.
         </p>
-        <button routerLink="/home" class="btn btn-main rounded-pill px-5 py-2">Shop Now</button>
+        <button routerLink="/home" class="btn btn-main rounded-pill px-5 py-2">
+          Shop Now
+        </button>
       </div>
       <div class="col-12 col-md-6 px-3 px-md-0">
         <div
@@ -42,7 +44,6 @@
     </div>
   </div>
 </section>
-
 <section class="services-section">
   <h2 class="text-center mb-2">Our Services</h2>
   <p class="text-center mb-5">Benefits when using our services</p>
@@ -99,7 +100,6 @@
     </div>
   </div>
 </section>
-
 <section class="products-section">
   <h2 class="text-center mb-2">Our Products</h2>
   <p class="text-center mb-5">Best Selling Product</p>
@@ -178,9 +178,7 @@
         <div
           class="poster-content d-flex flex-column justify-content-center align-items-center"
         >
-          <h2 class=" text-white">
-            Discover Fashion That Speaks To You.
-          </h2>
+          <h2 class="text-white">Discover Fashion That Speaks To You.</h2>
           <p class="w-75">
             Explore a range of high-quality, affordable furniture designed to
             transform any room. Discover the perfect blend of style, comfort,
@@ -205,8 +203,8 @@
         [id]="slide.id"
         *ngFor="let slide of slidesReviews"
       >
-        <div class="review rounded-4 overflow-hidden me-3 ">
-          <div class="quote-up  overflow-hidden mb-2">
+        <div class="review rounded-4 overflow-hidden me-3">
+          <div class="quote-up overflow-hidden mb-2">
             <img
               class="w-100"
               src="../../../assets/images/quote-up.png"
@@ -218,8 +216,8 @@
           >
             <p>{{ slide.review }}</p>
           </div>
-          <div class="d-flex justify-content-start align-items-center gap-2 ">
-            <div class="image overflow-hidden shadow-lg ">
+          <div class="d-flex justify-content-start align-items-center gap-2">
+            <div class="image overflow-hidden shadow-lg">
               <img class="" [src]="slide.src" [alt]="slide.name" />
             </div>
             <h3 class="text-center text-nowrap">{{ slide.name }}</h3>
@@ -233,24 +231,41 @@
   <h2 class="text-center mb-2">Contact Us</h2>
   <p class="text-center mb-5">We'd love to hear from you!</p>
   <div class="container mx-auto">
-        <div class="contact-form w-100">
-          <form class=" d-flex justify-content-center align-items-center flex-column ">
-            <div class="form-group w-100">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Name" />
-            </div>
-            <div class="form-group w-100">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Your Email" />
-            </div>
-            <div class="form-group w-100">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-main rounded-pill px-5 py-2 mt-2">Submit</button>
-          </form>
+    <div class="contact-form w-100">
+      <form
+        class="d-flex justify-content-center align-items-center flex-column"
+      >
+        <div class="form-group w-100">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Your Name"
+          />
         </div>
-      </div>
-
+        <div class="form-group w-100">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Your Email"
+          />
+        </div>
+        <div class="form-group w-100">
+          <label for="message">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-main rounded-pill px-5 py-2 mt-2">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
 </section>
 <app-footer></app-footer>

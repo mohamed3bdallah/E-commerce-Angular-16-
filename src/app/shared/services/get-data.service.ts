@@ -8,7 +8,10 @@ import { environment } from '../../components/environments/environment';
 export class GetDataService {
   constructor(private readonly http:HttpClient) { }
 
-  getData():Observable<any>{
+getProduct():Observable<any>{
     return this.http.get(`${environment.BaseUrl}/api/v1/products`)
+  }
+  getCategory():Observable<any>{
+    return this.http.get(`${environment.BaseUrl}/api/v1/categories`)
   }
 }

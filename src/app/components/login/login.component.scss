@@ -14,12 +14,19 @@ form{
     border-radius: 20px;
   }
 }
+.log-img{
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px 0px 0px 20px;
+
+}
 .bg-main{
   background-color: #fdf9f3;
   padding: 20px 40px;
   border-radius: 10px;
   font-family: var(--font-secondary);
-  // border: 1px solid var(--main-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+  border: 1px solid var(--main-color);
     border-radius: 0px 20px 20px 0px;
   @media screen and (max-width: 768px){
     border-radius: 20px;
@@ -29,7 +36,7 @@ form{
 }
 .form-group{
   color: var(--main-color);
-  // margin-bottom: 10px;
+  margin-bottom: 10px;
 
   label{
     font-weight: 500 ;

@@ -39,6 +39,9 @@ h6 {
   &:hover {
     background-color: var(--text-color);
     color: white;
+    i{
+      color: white;
+    }
   }
 }
 .nav-link {

@@ -63,7 +63,7 @@ export class LandingComponent implements OnInit {
     this.searchTerm = name;
   }
   getProducts() {
-    this.getDataService.getData().subscribe({
+    this.getDataService.getProduct().subscribe({
       next: (res) => {
         this.products = res.data;
         console.log(this.products);

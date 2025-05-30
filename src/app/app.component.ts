@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'E-commerce';
+  onTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+
+  }
 }
